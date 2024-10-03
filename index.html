@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
+    <title>Get Well Soon!</title>
+    <link rel="icon" href="icons/tab-icon.png" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body style="font-family: 'Comic Neue';" class="relative">
+
+    <!-- MUSIC PLAYER -->
+    <div class="fixed left-6 bottom-6 z-10">
+        <div
+            class="music-container relative bg-neutral-100 py-3 px-3 border-2 z-10 rounded-md border-black flex items-center">
+            <div class="toggle-player bg-neutral-100 border-2 border-black">
+                <img class="w-full" src="icons/close.svg" alt="">
+            </div>
+            <div class="avatar absolute w-14">
+                <img class="w-full border-2 bg-white border-black rounded-full spin-animation" src="icons/frenchie.png"
+                    alt="">
+            </div>
+            <div class="player">
+                <div class="sound-bars-lottie">
+                    <div class="sound-bars"></div>
+                </div>
+                <div class="track-info -space-y-1">
+                    <div class="trackname">Banana</div>
+                    <div class="trackartist">Track Artist</div>
+                </div>
+                <div class="track-nav">
+                    <div class="prev-track">
+                        <img class="w-7" src="icons/backplayer.svg" alt="">
+                    </div>
+                    <div class="playpause-track">
+                        <img class="w-8" src="icons/play.svg" alt="">
+                    </div>
+                    <div class="next-track">
+                        <img class="w-7" style="transform: rotate(180deg);" src="icons/backplayer.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BACKGROUND -->
+    <div class="background">
+        <div class="one">
+
+            <div class="container">
+                <div class="envelope-wrapper">
+                    <div class="envelope">
+                        <div class="letter">
+                            <div class="text">
+                                <strong style="font-size: .89rem;">To My Hater,</strong>
+                                <p style="text-indent: 12px; font-size: 0.65rem;">
+                                    Just wanted to write you a get well soon card since you might be sick. Think of this
+                                    as an extension to the team building experience. Try to get better faster because
+                                    when you're not at work I end up doing all the demos 😔. Anyways that's all you're
+                                    getting from me. Next time I'll bring you coffee because I know how much I
+                                    ✨brighten✨
+                                    your day/life.
+                                </p>
+                                <p class="love">From Your #1 Yapper</p>
+                                <p style="text-align: center; font-size: 0.4rem; font-weight: bold;">P.S. Hope these
+                                    songs help you relax 😎
+                                </p>
+                                <div class="pana">
+                                    <img src="icons/fingerheart.png" alt="" class="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+            envelope.classList.toggle('open');
+        });
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
